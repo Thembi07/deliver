@@ -1,0 +1,15 @@
+ion-content {
+    --background: rgba(197, 163, 163, 0.582);
+}
+
+ion-card {
+    // width: 100%;
+    img {
+        width: 100%;
+        // height: 100%;
+        height: 117px;
+    }
+    ion-card-title{
+        display: block;
+    }
+}

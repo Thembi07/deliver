@@ -1,0 +1,156 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>menu</ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="goCart()">
+              <ion-badge *ngIf="cart.length > 0">{{ cart.length }}</ion-badge>
+              <ion-icon slot="icon-only" name="cart"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="openCart()" #cart>
+      <div class="cart-length">{{ cartItemCount | async }}</div>
+      <ion-icon name="cart" class="cart-icon"></ion-icon>
+    </ion-fab-button>
+  </ion-fab> -->
+
+
+    <ion-item lines="none" color="transparent">
+        <ion-label><b>Coffee :</b></ion-label>
+    </ion-item>
+
+    <ion-slides [options]="slideOps">
+        <ion-slide *ngFor="let product of items">
+
+            <ion-card > 
+                <img [src]='product.url'>
+                    <ion-card-title>{{product.name}}</ion-card-title>
+                    <p>{{product.desc}}</p>
+                    <p>{{product.price}}</p>
+                    <ion-button size="small" color="medium" (click)="add(product)">Add to cart</ion-button>
+                  
+            </ion-card>
+        </ion-slide>
+<!-- 
+        <ion-slide>
+
+            <ion-card>
+                <img src="./assets/images/espresso.png">
+                    <ion-card-title>Espresso</ion-card-title>
+                    <p>coffee with extra milk</p>
+                    <p>R14.99</p>
+                    <ion-button size="small" color="medium">Add to cart</ion-button>
+            
+            </ion-card>
+        </ion-slide>
+
+        <ion-slide>
+            <ion-card>
+                <img src="./assets/images/latte.jpg">
+                    <ion-card-title>Latte</ion-card-title>
+                   <p>coffee with extra milk</p>
+                    <p>R14.99</p>
+                    <ion-button size="small" color="medium" click>Add to cart</ion-button>
+                
+            </ion-card>
+        </ion-slide>
+
+
+        <ion-slide>
+            <ion-card>
+                <img src="./assets/images/cappuccino.jpg">
+                    <ion-card-title>Capuccino</ion-card-title>
+                    <p> extra coffee</p>
+                    <p>R16.99</p>
+                    <ion-button size="small" color="medium">Add to cart</ion-button>
+               
+            </ion-card>
+        </ion-slide> -->
+    </ion-slides>
+
+    <ion-item lines="none" color="transparent">
+        <ion-label><b>iced coffee :</b></ion-label>
+    </ion-item>
+
+
+
+
+    <ion-slides [options]="slideOps">
+        <ion-slide *ngFor="let product of items">
+
+            <ion-card > 
+                <img [src]='product.url'>
+                    <ion-card-title>{{product.name}}</ion-card-title>
+                    <p>{{product.desc}}</p>
+                    <p>{{product.price}}</p>
+                    <ion-button size="small" color="medium" (click)="add(product)">Add to cart</ion-button>
+                  
+            </ion-card>
+        </ion-slide>
+
+         <!-- <ion-slide>
+
+            <ion-card>
+                <img src="./assets/images/iced-cof.jpg">
+                    <ion-card-title>Ice coffee</ion-card-title>
+                    <p>coffee with extra ice</p>
+                   <p>R12.99</p>
+                   <ion-button size="small" color="medium">Add to cart</ion-button>
+                  
+            </ion-card>
+        </ion-slide>  -->
+
+
+
+    </ion-slides>
+
+
+
+  <!-- <ion-item lines="none" color="transparent">
+        <ion-label><b>Muffins :</b></ion-label>
+    </ion-item>
+
+    <ion-slides [options]="slideOps">
+        <ion-slide *ngFor="let product of items">
+
+            <ion-card>
+            <img src="./assets/images/blueberry muf.png">
+            <ion-card-title>Blueberry</ion-card-title>
+            <p>with Blueberries</p>
+             <p>R11.99</p>
+             <ion-button size="small" color="medium">Add to cart</ion-button>
+            </ion-card>
+        </ion-slide>
+
+        <ion-slide>
+
+            <ion-card>
+                <img src="./assets/images/chocolate cupcake.png">
+                    <ion-card-title>ChocMuffin</ion-card-title>
+                    <p>with Vanilla</p>
+                   <p>R12.99</p>
+                   <ion-button size="small" color="medium">Add to cart</ion-button>
+                  
+            </ion-card>
+          </ion-slide> --> 
+
+
+
+<!-- </ion-slides> -->
+
+
+
+
+
+
+
+
+
+
+
+</ion-content>
